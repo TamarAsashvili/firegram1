@@ -21,3 +21,6 @@ const projectStorage = firebase.storage();
 const progectFirestore = firebase.firestore();
 
 export { projectStorage, progectFirestore };
+
+
+
