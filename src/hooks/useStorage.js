@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { projectStorage, progectFirestore, timestamp } from '../firebase/config';
+import { projectStorage, projectFirestore, timestamp } from '../firebase/config';
 
 
 const useStorage = (file) => {
@@ -10,7 +10,7 @@ const useStorage = (file) => {
     useEffect(() => {
         //references
         const storageRef = projectStorage.ref(file.name);
-        const collectionRef = progectFirestore.collection('images');
+        const collectionRef = projectFirestore.collection('images');
 
         storageRef.put(file).on('state_changed', (snap) => {
             let persentage = (snap.bytesTransferred / snap.totalBytes) * 100
